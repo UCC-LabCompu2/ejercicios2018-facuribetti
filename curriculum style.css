@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+    font-family: 'Gugi', cursive;
+    background: dodgerblue;
+}
+div{
+    padding: 20px;
+    margin: 30px;
+    border: 2px solid cadetblue;
+    border-radius: 20px ;
+    background: lightskyblue;
+}
+.img_usuario{
+    width: 50%;
+    border-radius: 20px;
+}
