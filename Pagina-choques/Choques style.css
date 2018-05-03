@@ -1,0 +1,32 @@
+body{
+
+}
+
+div{
+text-align: center;
+}
+
+.titulo_principal{
+    text-align: center;
+    font-family: 'Gugi', cursive;
+
+}
+
+.pagina_principal{
+    text-align: center;
+    font-family: "Arial Black";
+}
+
+.imagen_principal{
+    width: 20%;
+    border-radius: 20px;
+}
+
+.img_select{
+    width: 10%;
+    border-radius: 10px;
+}
+
+footer{
+    text-align: right;
+}
