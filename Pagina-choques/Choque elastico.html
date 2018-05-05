@@ -2,9 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Choque inelastico</title>
+    <link rel="stylesheet" type="text/css" href="Choques style.css">
 </head>
 <body>
+<ul>
+    <li><a href="Choques.html">Pagina principal</a></li>
+    <li><a class="active"> Choque inelastico </a></li>
+    <li><a href="Choques  pag 2.html">volver</a></li>
+    <li style="float:right"><a href="#about">info</a></li>
+</ul>
+
+<div>
+    <canvas class="Canvas"  width="500" height="300">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+</div>
+
+<div class="row">
+    <div class="column1">
+        <p> velocidad final del objeto 1: ... m/s</p>
+    </div>
+    <div class="column2">
+        <p> velocidad final del objeto 2: ... m/s</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="column1">
+        <h3>Masa del objeto 1</h3>
+        <input type="range" class="barra" name="cantidad" value="999">
+        <select name="unidades" class="unidad">
+            <option value="gramos">Gramos</option>
+            <option value="kilogramos">Kilogramos</option>
+        </select>
+    </div>
+    <div class="column1">
+        <h3>Velocidad del objeto 1</h3>
+        <input type="range" class="barra" value="999">
+        <select name="unidades" class="unidad">
+            <option value="mxs">m/s</option>
+            <option value="kxh">km/h</option>
+        </select>
+    </div>
+</div>
+
 
 </body>
 </html>
