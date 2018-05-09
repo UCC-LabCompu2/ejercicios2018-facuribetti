@@ -15,6 +15,15 @@ text-align: center;
     padding: 5px 15px;
 }
 
+#button2 {
+    border-radius: 15px;
+    background: dodgerblue;
+    border-radius: 15px;
+    color: black;
+    font-weight: bolder;
+    padding: 5px 15px;
+}
+
 .titulo_principal{
     text-align: center;
     font-family: 'Gugi', cursive;
@@ -31,8 +40,18 @@ text-align: center;
     border-radius: 20px;
 }
 
+.columna-elas{
+    width: 50%;
+    float: left;
+}
+
+.columna-inelas{
+    width: 50%;
+    float: right;
+}
+
 .img_select{
-    width: 10%;
+    width: 75%;
     border-radius: 10px;
 }
 
@@ -57,7 +76,6 @@ canvas {
 
 .column1 {
     background-color:#aaa;
-    margin-top: ;
     text-align: left;
     float:left;
     width: 27%;
@@ -71,12 +89,7 @@ canvas {
     width: 27%;
     padding: 10px;
 }
-/*
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}*/
+
 /* de aca hasta la etiqueta active estoy probando hacer el menu tipo barra*/
 ul {
     list-style-type: none;
