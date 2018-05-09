@@ -6,7 +6,7 @@ div{
 text-align: center;
 }
 
-#button {
+button {
     border-radius: 15px;
     background: dodgerblue;
     border-radius: 15px;
@@ -56,16 +56,16 @@ text-align: center;
 }
 
 canvas {
-    padding: 0;
-    margin: auto;
-    display: block;
-    width: 40%;
-    height: 40%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    //padding: 0;
+    //margin: auto;
+    //display: block;
+    //width: 40%;
+    //height: 40%;
+    //position: absolute;
+    //top: 0;
+    //bottom: 0;
+    //left: 0;
+    //right: 0;
     border:2px solid dodgerblue;
     border-radius: 10px;
 }
@@ -80,6 +80,7 @@ canvas {
     float:left;
     width: 27%;
     padding: 10px;
+	overflow: hidden;
 }
 
 .column2 {
@@ -88,6 +89,12 @@ canvas {
     float: right;
     width: 27%;
     padding: 10px;
+	overflow: hidden;
+}
+
+.column3{
+	overflow: hidden;
+	height: 100%;
 }
 
 /* de aca hasta la etiqueta active estoy probando hacer el menu tipo barra*/
