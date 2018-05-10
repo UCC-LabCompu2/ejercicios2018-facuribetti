@@ -15,7 +15,8 @@ button {
     padding: 5px 15px;
 }
 
-#button2 {
+
+#button {
     border-radius: 15px;
     background: dodgerblue;
     border-radius: 15px;
@@ -81,6 +82,9 @@ canvas {
     width: 27%;
     padding: 10px;
 	overflow: hidden;
+    //position:absolute;
+    //bottom: 10px;
+
 }
 
 .column2 {
@@ -126,6 +130,9 @@ li a:hover:not(.active) {
     background-color: dodgerblue;
 }
 
+
+
 footer{
     text-align: right;
+    float: bottom;
 }
