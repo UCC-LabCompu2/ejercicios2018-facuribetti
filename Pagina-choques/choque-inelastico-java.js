@@ -1,20 +1,3 @@
-function dibujo() {
-    var canvas = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
-    var x = canvas.width/2;
-    var y = canvas.height-30;
-    ctx.fillStyle = "#000";
-    ctx.beginPath();
-    var img = new Image();
-    img.src = 'imagenes/mario-kart.png';
-    ctx.drawImage(img,10,10);
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.moveTo(0,0);
-    ctx.fill();
-    ctx.closePath()
-}
-
 addEventListener('load',inicio,false); //para ver el valor de los input range
 function inicio()
 {
@@ -49,8 +32,62 @@ function VF() {
 
     //var V1F = (((parseFloat(M1) - parseFloat(M2))/(parseFloat(M1) + parseFloat(M2))) * parseFloat(V1)) + (((parseFloat(M2) + parseFloat(M2)) / (parseFloat(M1) + parseFloat(M2))) * parseFloat(V2));
     var VF = ((parseFloat(M1) * parseFloat(V1)) + (parseFloat(M2) * parseFloat(V2))) / (parseFloat(M1) + parseFloat(M2) );
-    //document.getElementById("V1F").innerHTML = VFINAL1;
+
     alert("la velocidad final de los objetos es: " + VF);
-//    alert("la velocidad final del objeto 2 es: " + V2F);
+
 
 }
+
+/*las utilizo de tipo global asi declaro sus valores una sola vez y asi la funcion dibujar no me los modifica */
+var x1 = 50;
+var x2 = 480 - 50;
+
+function dibujar() {
+
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+
+    ctx.clearRect(0,0, canvas.width, canvas.height);
+    ctx.beginPath();
+
+    //variables de velocidad ingresadas por el usuario en los sliders
+    var V1 = document.getElementById('velocidad1').value;
+    var V2 = document.getElementById('velocidad2').value;
+
+    var vx1 = V1/100;             //velocidad relativa de la pelota 1 dependiente de la velocidad del objeto 1
+    var vx2 = V2/100;             //velocidad relativa de la pelota 2 dependiente de la velocidad del objeto 2
+
+    //para dibujar ambas pelotas
+    var y  = 160; // y coordinate
+    var radius = 20; // Arc radius
+    var startAngle = 0;
+    var endAngle = Math.PI + (Math.PI * 3) / 2;
+    var anticlockwise = 4 % 2 !== 0;
+    ctx.arc(x1, y, radius, startAngle, endAngle, anticlockwise);
+    ctx.arc(x2, y, radius, startAngle, endAngle, anticlockwise);
+    ctx.fillStyle = 'dodgerblue';
+    ctx.fill();
+
+
+    //calculos para el movimiento de los objetos
+
+
+
+    //funcion para detectar la colision entre ambos objetos
+
+    if(x1>x2){
+        vx1 = -vx1;
+        vx2 = -vx2;
+        x1 = x1-1;
+        x2 = x2+1;
+//        x1 = x1 - vx1;
+//        x2 = x2 + vx2;
+    }
+    else{
+        x1 = x1 + vx1;
+        x2 = x2 + vx2;
+    }
+
+}
+setInterval(dibujar, 15);
